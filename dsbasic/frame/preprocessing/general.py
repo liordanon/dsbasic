@@ -22,7 +22,7 @@ class fColumnSelector(BaseEstimator, TransformerMixin):
     [4 5]
     [7 8]
     """
-    def __init__(self, columns='all', copy=True):
+    def __init__(self, columns=None, copy=True):
 
         self.columns = columns
         self.copy = copy
@@ -60,7 +60,7 @@ class fToArray(BaseEstimator, TransformerMixin):
 
         NOT OK:
             A = enc.fit_transform(X)
-            Y_ = enc.transform(Y)
+            Y_ = enc.inverse_transform(Y)
     """
 
     def __init__(self):
