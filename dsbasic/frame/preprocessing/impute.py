@@ -58,7 +58,7 @@ class fImputer(BaseEstimator, TransformerMixin):
         if result is None:
             result = X
 
-        return X
+        return result
 
 
 
